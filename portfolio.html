@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="ashwaniechaudhry" content="Educator & Mentor
+I am a passionate educator and dedicated mentor committed to helping students discover their potential and achieve their goals. I believe education is not just about gaining knowledge, but about building confidence, developing skills, and creating a strong foundation for the future.
+I strive to make learning simple, engaging, practical, and meaningful. Through personalized guidance and continuous motivation, I help learners overcome challenges, improve their skills, and grow both academically and personally.
+My mission: Educate • Inspire • Guide • Empower 🌟">
+
+    <title>Ashwanie Chaudhary | Educator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(43, 43, 4);
+            background: #0b1120;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            body{
+                flex-wrap: wrap;
+            
+            }
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(6, 1, 31, 0.95);
+            box-shadow: 0 2px 15px #60a5fa;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #d1d5db;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #d1d5db;
+            font-weight: 800;
+        }
+
+        nav ul li a:hover
+         {
+            color: #111827;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            padding: 130px 8% 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-text h4 {
+            color: #2563eb;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(45px, 7vw, 80px);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #2563eb;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            /* transform: translateY(-3px); */
+            transform: scale(1.5);
+            background: #1d4ed8;
+        }
+
+        /* PROFILE */
+        .profile-box {
+            width: 700px;
+            height: 700px;
+            border-radius: 80%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #01091b, #60a5fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 30px 10px rgba(37,99,235,0.25);
+        }
+
+        .profile-box div {
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+             background-image: url("profilepic.jpeg");
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+            /* background: white; */
+            display: block;
+            padding: 30px;
+        }
+
+        /* SECTIONS */
+        section.content {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            display: grid;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .skill h3 {
+            color: #2563eb;
+        }
+
+        /* SERVICES */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact p {
+            color: #d1d5db;
+            margin: 15px 0 30px;
+        }
+
+        .contact .btn {
+            background: white;
+            color: #2563eb;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0b1120;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 130px;
+            }
+
+            .profile-box {
+                width: 500px;
+                height: 500px;
+            }
+
+            .profile-box div {
+                width: 500px;
+                height: 500px;
+                font-size: 20px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section.content {
+                padding: 65px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">ASHWANIE CHAUDHARY</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#Contact-Details">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h4>Hello, I'm</h4>
+
+            <h1>
+                Ashwanie <span>Chaudhary</span>
+            </h1>
+
+            <h2>An Educator</h2>
+
+            <p>
+                Inspiring minds, building confidence and helping students
+                achieve their educational goals through effective learning.
+            </p>
+
+            <a href="https://www.instagram.com/malik_ashwanie_chaudhary/#" class="btn">
+                Explore My Profile
+            </a>
+        </div>
+
+        <div class="profile-box">
+            <div>
+                <!-- ASHWANIE<br>
+                CHAUDHARY -->
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="content" id="about">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Passionate about Education and Teaching</p>
+        </div>
+
+        <div class="about">
+
+            <div class="about-text">
+                <h3>Educator & Mentor</h3>
+
+                <p>
+                    I believe that education is not only about learning
+                    from books, but also about developing confidence,
+                    curiosity and practical skills.
+                </p>
+
+                <p>
+                    My aim is to create a positive learning environment
+                    where every student can understand concepts clearly
+                    and grow with confidence.
+                </p>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">
+                    <h3>📚 Teaching</h3>
+                    <p>Concept-based and student-friendly learning.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>💡 Mentoring</h3>
+                    <p>Guidance to help students achieve their goals.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>💻 Technology</h3>
+                    <p>Using modern technology and content to make learning engaging and interesting</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEACHING -->
+    <section class="content" id="teaching">
+
+        <div class="section-title">
+            <h2>What I Do</h2>
+            <p>Teaching • Guidance • Growth</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">📖</div>
+                <h3>Teaching</h3>
+                <p>
+                    Simple and effective teaching methods
+                    focused on clear understanding.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Student Guidance</h3>
+                <p>
+                    Helping students identify their strengths
+                    and work towards their goals.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Digital Learning</h3>
+                <p>
+                    Combining education with modern digital
+                    tools and technology.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT
+    <section class="content contact" id="contact">
+
+        <div class="section-title">
+            <h2>Let's Connect</h2>
+        </div>
+
+        <p>
+            Interested in learning, collaboration or educational projects?
+        </p>
+
+        <a href="ashwaniechaudhry@gmail.com" class="btn">
+            Contact Me
+        </a> -->
+
+    </section>
+
+    <section class="contact details" id="Contact-Details">
+
+        <div class="section-title">
+            <h2>Let's Connect</h2>
+        </div>
+
+        <p>
+            Interested in learning, collaboration or educational projects?
+        </p>
+<h2>Adress: f-9739/306, Sanjay colony, Sec-23, Faridabad</h2>
+        <h3>mobile:-8285878838</h3>
+            <h4>email_id: ashwaniechaudhry@gmail.com</h4>
+
+        
+<button onclick="showMessage()">Contact me</button>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Ashwanie Chaudhary | An Educator
+
+        </p>
+        
+    </footer>
+    
+<script src="script.js"></script>
+</body>
+</html>
